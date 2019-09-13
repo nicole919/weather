@@ -1,40 +1,34 @@
 <!DOCTYPE HTML>
+
 <head>
     <title> So, How's the Weather? A Comparison App</title>
-    <link rel="stylesheet" href="style.css"></link>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </link>
 </head>
+
 <body>
     <header>
         <h1 class="mainHeader">So, How's the Weather?</h1>
     </header>
     <main>
-        <div id = "you-container">
-                <form id="you-form">
-                    <input type="text" id="js-city-search" name="city" placeholder="enter city" required>
-                    <button id="getYouWeather"> Go </button>
-                    <button type="reset"> Reset </button>
-                </form>
-                <p id="js-error"></p>
-                <section id="results-you" class="hidden">
-                    <p id="desc"></p>
-                    <p><span id="temp"></span><span class="tempunit" ></span></p>
-                </section>
+
+        <div id="you-container">
+            <input type="text" id="city" name="city" placeholder="enter city" required>
+            <button id="getYouWeather"> Go </button>
+            <p id="js-error"></p>
+            <div id="results-you"></div>
         </div>
 
-        <div id = "them-container">
-                <form id="them-form">
-                    <input type="text" name="city" placeholder="enter city" required>
-                    <button id="getThemWeather"> Go </button>
-                    <button type="reset"> Reset </button>
-                </form>
-                <p id="js-error"></p>
-                <section id="results-them" class="hidden">
+        <div id="them-container">
+            <input type="text" id="city2" name="city" placeholder="enter city" required>
+            <button id="getThemWeather"> Go </button>
 
-                </section>
+            <p id="js-error2"></p>
+            <div id="results-them"></div>
         </div>
     </main>
-
-<script src="script.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

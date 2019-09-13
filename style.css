@@ -23,10 +23,6 @@ main {
     border: 1px solid;
 }
 
-#you-form {
-    text-align: center;
-    padding-top: 20px;
-}
 
 #them-container {
     width: 400px;
@@ -34,10 +30,7 @@ main {
     border: 1px solid;
 }
 
-#them-form {
-    text-align: center;
-    padding-top: 20px;
-}
+
 .hidden {
     display: none;
 }
