@@ -71,6 +71,12 @@ button {
     cursor: pointer;
     }
 
+#results-you {
+    width: 100%;
+    margin: auto;
+    color: white;
+    border-radius: 15px;
+    }
 #results-them {
     width: 100%;
     margin: auto;
