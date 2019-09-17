@@ -176,7 +176,7 @@ input[type=text] {
         font-size: 20px;
     }
     #you-container {
-        width: 30%;
+        width: 40%;
         height: 500px;
         background: rgba(0, 0, 0, 0.2);
         margin-top: 30px; 
@@ -189,9 +189,10 @@ input[type=text] {
         color: white;
         border-radius: 15px;
         font-size: 15px;
+        text-align: center;
         }
     #them-container {
-        width: 30%;
+        width: 40%;
         height: 500px;
         background: rgba(0, 0, 0, 0.2);
         margin-top: 30px; 
@@ -204,6 +205,7 @@ input[type=text] {
         color: white;
         border-radius: 15px;
         font-size: 15px;
+        text-align: center;
         }
     #all-results {
         height: 600px;
