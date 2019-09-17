@@ -16,7 +16,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Manjari', sans-serif;
 }
@@ -177,7 +177,7 @@ input[type=text] {
         font-size: 20px;
     }
     #you-container {
-        width: 40%;
+        width: 30%;
         height: 500px;
         background: rgba(0, 0, 0, 0.2);
         margin-top: 30px; 
@@ -192,7 +192,7 @@ input[type=text] {
         font-size: 15px;
         }
     #them-container {
-        width: 40%;
+        width: 30%;
         height: 500px;
         background: rgba(0, 0, 0, 0.2);
         margin-top: 30px; 
@@ -240,7 +240,6 @@ input[type=text] {
 }
 
 /*phones */
-
 @media (min-width: 360px) and (min-height: 736px) {
     .mainHeader {
         font-size: 70px;
@@ -252,7 +251,9 @@ input[type=text] {
         padding-bottom: 20px;
         font-family: 'Manjari', sans-serif;
     }
-    
+    #all-results {
+        height: 75vh;
+    }
     .app-desc {
         text-align: center;
         background-color: black;
@@ -262,7 +263,5 @@ input[type=text] {
         padding-top: 20px;
         font-size: 35px;
         font-family: 'Manjari', sans-serif;
-    }
-
-    
+    } 
 }
