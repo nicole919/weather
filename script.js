@@ -17,6 +17,13 @@ $(document).ready(function () {
             googleGeocoder.geocode({ 'location': { lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude) } }, function (results) {
                 console.log(getCityGoogle(results))
                 const city = getCityGoogle(results);
+                const { latitude, longitude } = getLatLong(results);
+                getWeather(latitude, longitude, (data) => {
+                    let widget = youResults(data)
+
+                    $('#results-you').html(widget);
+
+                })
                 $('#city').val(city);
 
             })
@@ -24,8 +31,16 @@ $(document).ready(function () {
     })
 });
 
+function getLatLong(googleGeocodeResult) {
+    const firstResult = googleGeocodeResult[0];
+    const latitude = firstResult.geometry.location.lat();
+    const longitude = firstResult.geometry.location.lng();
+    return { latitude, longitude };
+}
+
 function getCityGoogle(googleGeocodeResult) {
     const firstResult = googleGeocodeResult[0];
+    console.log(googleGeocodeResult);
     if (!firstResult) {
         return null;
     }
