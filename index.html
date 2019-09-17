@@ -4,43 +4,53 @@
     <title> So, How's the Weather? A Comparison App</title>
     <link rel="stylesheet" href="style.css">
     </link>
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
         <h1 class="mainHeader">So, How's the Weather?</h1>
-    </header>
-    <main>
-        <div id="all-results">
-            <div id="you-container">
-                <form>
-                    <input type="text" id="city" name="city" placeholder="enter city">
-                    <button id="metric">C</button>
-                    <button id="imperial">F</button>
-                    <button id="you-location">Find Me</button>
-                </form>
-                <p id="js-error"></p>
-                <div id="results-you"></div>
-            </div>
+        <p class="app-desc">an app to compare weather
+            <span class="heart">
+                <3 </span> </p> </header> <main>
+                    <div id="all-results">
+                        <div id="you-container">
+                            <form id="you-form">
+                                <input type="text" id="city" name="city" placeholder="enter city">
+                                <div class="buttons">
+                                    <button class="celcius" id="metric">C</button>
+                                    <button class="selected" id="imperial">F</button>
+                                    <button id="you-location">Find Me</button>
+                                </div>
+                            </form>
 
-            <div id="them-container">
-                <input type="text" id="city2" name="city" placeholder="enter city" required>
-                <button id="metric2">C</button>
-                <button id="imperial2">F</button>
+                            <div id="results-you"></div>
+                        </div>
 
-                <p id="js-error2"></p>
-                <div id="results-them"></div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p class="about-info"></p>
-    </footer>
+                        <div id="them-container">
+                            <form id="them-form">
+                                <input type="text" id="city2" name="city" placeholder="enter city" required>
+                                <div class="buttons">
+                                    <button id="metric2">C</button>
+                                    <button class="selected" id="imperial2">F</button>
+                                </div>
+                            </form>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="script.js"></script>
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-GTYe0EJoRzgH2usm4QKpVD8skW1aoUE&libraries=places"></script>
+                            <div id="results-them"></div>
+                        </div>
+                    </div>
+                    </main>
+                    <footer>
+                        <p class="about-info"> This app was created by <a href="emaaaaail">Nicole</a> using the <a
+                                href="http://openweathermap.org">
+                                openweathermap.org</a> API.</p>
+                    </footer>
+
+                    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+                    <script src="script.js"></script>
+                    <script type="text/javascript"
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-GTYe0EJoRzgH2usm4QKpVD8skW1aoUE&libraries=places"></script>
 </body>
 
 </html>
