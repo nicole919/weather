@@ -38,7 +38,7 @@ body {
 
 #all-results {
     background: url(sunny.jpg) no-repeat;
-    background-size: 100% 1400px;
+    background-size: cover;
     width: 100%;
     height: 1300px;
     display: flex;
@@ -97,7 +97,6 @@ button.selected {
     background-color: white;
     color: black;
 }
-
 
 #results-you {
     width: 100%;
@@ -238,6 +237,8 @@ input[type=text] {
     font-size: 30px;
     }
 }
+
+
 
 /*phones */
 @media (min-width: 360px) and (min-height: 736px) {
