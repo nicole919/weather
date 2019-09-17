@@ -46,7 +46,6 @@ body {
     justify-content: space-around;
     padding-left: 20px;
     padding-right: 20px;
-   
    }
 
 #you-container {
@@ -161,10 +160,86 @@ input[type=text] {
       font-family: 'Manjari', sans-serif;
   }
 
+/*laptops and desktops */
+@media (min-width: 1025px) {
+    input[type=text] {
+        border: 2px solid black;
+        border-radius: 2px;
+        width:80%;
+        height: 35px;
+        font-size: 15px;
+        margin-bottom: 30px;
+        padding-left: 5px;
+      }
+    button {
+        height: 50px;
+        min-width: 50px;
+        font-size: 20px;
+    }
+    #you-container {
+        width: 40%;
+        height: 500px;
+        background: rgba(0, 0, 0, 0.2);
+        margin-top: 30px; 
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #results-you {
+        width: 100%;
+        margin: auto;
+        color: white;
+        border-radius: 15px;
+        font-size: 15px;
+        }
+    #them-container {
+        width: 40%;
+        height: 500px;
+        background: rgba(0, 0, 0, 0.2);
+        margin-top: 30px; 
+        padding-left: 5px;
+        padding-right: 5px;
+        }
+    #results-them {
+        width: 100%;
+        margin: auto;
+        color: white;
+        border-radius: 15px;
+        font-size: 15px;
+        }
+    #all-results {
+        height: 600px;
+    }
+    .mainHeader {
+        padding-bottom: 1px;
+    }
+    .about-info {
+        padding-bottom: 25px;
+    }
+}
 
-@media (min-width: 1024px) {}
+/*ipads */
+@media (min-width: 768px) and (max-width: 1024px) {
+#all-results {
+    height: 1000px;
+    }
+#results-you {
+    width: 100%;
+    margin: auto;
+    color: white;
+    border-radius: 15px;
+    font-size: 30px;
+    }
 
-@media (min-width: 768px) and (max-width: 1023px) {}
+#results-them {
+    width: 100%;
+    margin: auto;
+    color: white;
+    border-radius: 15px;
+    font-size: 30px;
+    }
+}
+
+/*phones */
 
 @media (min-width: 360px) and (min-height: 736px) {
     .mainHeader {
