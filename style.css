@@ -4,21 +4,38 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
+
 
 .mainHeader {
     font-size: 50px;
     text-align: center;
-  
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Manjari', sans-serif;
 }
 
-#js-error {
+.app-desc {
+    text-align: center;
+    background-color: black;
     color: white;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: 'Manjari', sans-serif;
 }
 
-#js-error2 {
-    color: white;
+.heart {
+    color: pink;
 }
+
 #all-results {
     background: url(sunny.jpg) no-repeat;
     background-size: 100% 1400px;
@@ -27,28 +44,34 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+    padding-left: 20px;
+    padding-right: 20px;
+   
    }
 
 #you-container {
-    width: 475px;
+    width: 48%;
     height: auto;
     background: rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 30px; 
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
 #them-container {
-    width: 475px;
+    width: 48%;
     height: auto;
     background: rgba(0, 0, 0, 0.2);
     margin-top: 30px;
-    margin-left: 20px;
-
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 button {
+    height: 70px;
+    min-width: 70px;
+    font-size: 30px;
     display:inline-block;
     padding:0.35em 1.2em;
     border:0.1em solid #FFFFFF;
@@ -65,46 +88,106 @@ button {
     cursor: pointer;
     }
 
-    button:hover{
+button:hover{
     color:#000000;
     background-color:#FFFFFF;
     cursor: pointer;
     }
+
+button.selected {
+    background-color: white;
+    color: black;
+}
+
 
 #results-you {
     width: 100%;
     margin: auto;
     color: white;
     border-radius: 15px;
+    font-size: 35px;
     }
+
 #results-them {
     width: 100%;
     margin: auto;
     color: white;
     border-radius: 15px;
+    font-size: 35px;
 }
+
+#you-form, #them-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 input[type=text] {
     border: 2px solid black;
     border-radius: 2px;
+    width:100%;
+    height: 60px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    padding-left: 5px;
   }
+
+  a {
+      text-decoration: none;
+      font-weight: 600;
+      color: pink;
+  }
+  a:hover {
+      text-decoration: underline;
+  }
+  
+  .about-info {
+      background-color: black;
+      margin: 0;
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 75px;
+      font-size: 25px;
+      text-align: center;
+      font-family: 'Manjari', sans-serif;
+  }
+
 
 @media (min-width: 1024px) {}
 
 @media (min-width: 768px) and (max-width: 1023px) {}
 
-@media (max-width: 767px) {
-    #js-error {
+@media (min-width: 360px) and (min-height: 736px) {
+    .mainHeader {
+        font-size: 70px;
+        text-align: center;
+        background-color: black;
         color: white;
-
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        font-family: 'Manjari', sans-serif;
     }
     
-    #js-error2 {
+    .app-desc {
+        text-align: center;
+        background-color: black;
         color: white;
+        margin: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 35px;
+        font-family: 'Manjari', sans-serif;
     }
 
-    #results-them {
-        color: white;
-        font-size: 50vw;
-    }
+    
 }
