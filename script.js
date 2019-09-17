@@ -18,6 +18,7 @@ $(document).ready(function () {
                 console.log(getCityGoogle(results))
                 const city = getCityGoogle(results);
                 $('#city').val(city);
+
             })
         })
     })
@@ -29,7 +30,7 @@ function getCityGoogle(googleGeocodeResult) {
         return null;
     }
     const city = firstResult.address_components.find(function (addressComponent) {
-        return addressComponent.types.includes('locality');
+        return addressComponent.types.includes('locality', 'administrative_area1');
     }).long_name;
     return city;
 }
@@ -38,7 +39,7 @@ function getCityGoogle(googleGeocodeResult) {
 
 function youResults(data) {
     const unitText = units === 'imperial' ? 'F' : 'C';
-    return '<h2 style="font-weight: bold; font-size:50px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
+    return '<h2 style="font-weight: bold; padding-left: 10px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
         "<h3 style='padding-left:40px;'><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
         "<h3 style='padding-left:40px;'><strong>Description</strong>:<img src='https://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</h3>" +
         "<h3 style='padding-left:40px;'><strong>Temperature</strong>: " + data.main.temp + " &deg;" + unitText + "</h3>" +
@@ -50,7 +51,7 @@ function youResults(data) {
 //them results
 function themResults(data) {
     const unitText = units === 'imperial' ? 'F' : 'C';
-    return '<h2 style="font-weight: bold; font-size:50px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
+    return '<h2 style="font-weight: bold; padding-left: 10px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
         "<h3 style='padding-left:40px;'><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
         "<h3 style='padding-left:40px;'><strong>Description</strong>:<img src='https://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + data.weather[0].description + "</h3>" +
         "<h3 style='padding-left:40px;'><strong>Temperature</strong>: " + data.main.temp + " &deg;" + unitText + "</h3>" +
