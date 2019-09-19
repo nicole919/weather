@@ -11,11 +11,9 @@ $(document).ready(function () {
     //geocoding
     $('#you-location').click(function (event) {
         event.preventDefault();
-        console.log(google.maps);
         window.navigator.geolocation.getCurrentPosition((position) => {
             const googleGeocoder = new google.maps.Geocoder()
             googleGeocoder.geocode({ 'location': { lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude) } }, function (results) {
-                console.log(getCityGoogle(results))
                 const city = getCityGoogle(results);
                 const { latitude, longitude } = getLatLong(results);
                 getWeather(latitude, longitude, (data) => {
@@ -182,6 +180,7 @@ function activatePlacesSearch() {
 
 // unit toggle call
 function getWeather(lat, lng, callback) {
+
     $.ajax({
         url: 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&units=' + units + '&APPID=e03c2a2f3a20aa1dad04f3d7ed15b3ae',
         type: "GET",
