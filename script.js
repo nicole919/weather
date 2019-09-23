@@ -51,6 +51,7 @@ function getCityGoogle(googleGeocodeResult) {
 //you results
 
 function youResults(data) {
+    $('#js-error').empty();
     const unitText = units === 'imperial' ? 'F' : 'C';
     return '<h2 style="font-weight: bold; padding-left: 10px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
         "<h3 style='padding-left:40px;'><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
@@ -63,6 +64,7 @@ function youResults(data) {
 
 //them results
 function themResults(data) {
+    $('#js-error').empty();
     const unitText = units === 'imperial' ? 'F' : 'C';
     return '<h2 style="font-weight: bold; padding-left: 10px; padding-top:30px;" class="text-center">Current Weather for ' + data.name + ', ' + data.sys.country + '</h2>' +
         "<h3 style='padding-left:40px;'><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
@@ -178,16 +180,24 @@ function activatePlacesSearch() {
     })
 }
 
-// unit toggle call
-function getWeather(lat, lng, callback) {
+function getWeather(lat, lon, callback) {
+    const url = (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&APPID=e03c2a2f3a20aa1dad04f3d7ed15b3ae`)
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error("response.statusText");
 
-    $.ajax({
-        url: 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&units=' + units + '&APPID=e03c2a2f3a20aa1dad04f3d7ed15b3ae',
-        type: "GET",
-        dataType: "jsonp",
-        success: function (data) {
-            callback(data)
-        }
-    });
+        })
+        .then(responseJson => callback(responseJson))
+        .catch(err => {
+            $('#js-error').text(`Unable to find your location, please using the search function`);
+
+        })
 }
+
+
+
+
 

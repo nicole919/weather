@@ -1,6 +1,6 @@
 https://nicole919.github.io/weather/
 
-So How's the Weather?
+# So How's the Weather?
 
 An app to compare weather in two different locations side by side.
 
