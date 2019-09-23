@@ -23,7 +23,6 @@ $(document).ready(function () {
 
                 })
                 $('#city').val(city);
-
             })
         })
     })
@@ -96,9 +95,8 @@ function activatePlacesSearch() {
             $('#results-you').html(widget);
 
         })
-
-
     })
+
     autocomplete2.addListener('place_changed', function () {
         const place = autocomplete2.getPlace()
         const latitude = place.geometry.location.lat();
@@ -187,16 +185,16 @@ function getWeather(lat, lon, callback) {
             if (response.ok) {
                 return response.json();
             }
-            throw new Error("response.statusText");
+            throw new Error(response.statusText);
 
         })
         .then(responseJson => callback(responseJson))
         .catch(err => {
+            console.log(err);
             $('#js-error').text(`Unable to find your location, please using the search function`);
-
+            $('#js-error').show();
         })
 }
-
 
 
 
