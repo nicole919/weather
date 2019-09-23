@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     </link>
     <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                     <div id="all-results">
                         <div id="you-container">
                             <form id="you-form">
-                                <input type="text" id="city" name="city" placeholder="enter city">
+                                <input type="text" id="city" name="city" placeholder="Enter City">
                                 <div class="buttons">
                                     <button class="celcius" id="metric">C</button>
                                     <button class="selected" id="imperial">F</button>
@@ -27,12 +27,13 @@
                                 </div>
                             </form>
 
+                            <p id="js-error"></p>
                             <div id="results-you"></div>
                         </div>
 
                         <div id="them-container">
                             <form id="them-form">
-                                <input type="text" id="city2" name="city" placeholder="enter city" required>
+                                <input type="text" id="city2" name="city" placeholder="Enter City" required>
                                 <div class="buttons">
                                     <button id="metric2">C</button>
                                     <button class="selected" id="imperial2">F</button>
