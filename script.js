@@ -25,6 +25,7 @@ $(document).ready(function () {
                 $('#city').val(city);
             })
         })
+        $('#js-error').removeClass('hidden');
     })
 });
 
